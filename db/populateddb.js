@@ -12,13 +12,16 @@ CREATE TABLE IF NOT EXISTS users (
   last_name VARCHAR ( 255 ),
   email VARCHAR ( 255 ),
   password VARCHAR ( 255 ),
-  member_status VARCHAR ( 255 )
+  member_status VARCHAR ( 255 ),
+  is_admin varchar(255)
 );
 CREATE TABLE IF NOT EXISTS post (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   content VARCHAR ( 255 ),
   user_id INTEGER,
-  FOREIGN KEY (user_id) references users(id)
+  FOREIGN KEY (user_id) references users(id),
+  date_added date,
+  last_updated date
 );
 `;
 

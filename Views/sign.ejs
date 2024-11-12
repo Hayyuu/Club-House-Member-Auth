@@ -1,0 +1,11 @@
+
+    <%- include("./partials/error.ejs")%>
+   
+    <form action="/login" method="post" style="display: grid;justify-items: center;background-color: aqua;">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+        <a href="/signup">Register</a>
+        <button type="submit">Submit</button>
+    </form>
